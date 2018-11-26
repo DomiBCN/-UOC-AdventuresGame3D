@@ -15,15 +15,11 @@ public class LightActivator : MonoBehaviour
     DayNightManager dayNight;
 
     bool lightsOn;
-
-    private void Awake()
-    {
-        dayNight = GameObject.FindGameObjectWithTag("DayNightManager").GetComponent<DayNightManager>();
-    }
-
+    
     // Use this for initialization
     void Start()
     {
+        dayNight = DayNightManager.instance;
         myRenderer = GetComponent<MeshRenderer>();
         TurnOff();
     }
@@ -45,14 +41,15 @@ public class LightActivator : MonoBehaviour
 
     void TurnOn()
     {
-        //Debug.Log("TURN_ON");
         myLight.enabled = true;
-        myRenderer.materials[5] = lightMaterial;
+        if(lightMaterial != null)
+            myRenderer.materials[5] = lightMaterial;
     }
 
     void TurnOff()
     {
         myLight.enabled = false;
-        myRenderer.materials[5] = normalMaterial;
+        if (normalMaterial != null)
+            myRenderer.materials[5] = normalMaterial;
     }
 }

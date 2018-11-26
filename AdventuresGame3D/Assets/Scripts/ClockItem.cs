@@ -14,6 +14,7 @@ public class ClockItem : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        timeManager = DayNightManager.instance;
         Respawn();
     }
 

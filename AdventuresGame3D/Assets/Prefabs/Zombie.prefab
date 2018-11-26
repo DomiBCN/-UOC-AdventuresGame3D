@@ -94,6 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4046550896594424}
+  - component: {fileID: 65421316334034846}
   m_Layer: 2
   m_Name: Head
   m_TagString: Untagged
@@ -449,9 +450,12 @@ GameObject:
   - component: {fileID: 114131220104626238}
   - component: {fileID: 114612974525756208}
   - component: {fileID: 114811786153539686}
+  - component: {fileID: 114747431916683208}
+  - component: {fileID: 114360528260734212}
+  - component: {fileID: 82721992886925938}
   m_Layer: 2
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,6 +515,21 @@ GameObject:
   - component: {fileID: 4527360258265770}
   m_Layer: 2
   m_Name: RightHandIndex2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1285099667984782
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4384179413074400}
+  m_Layer: 2
+  m_Name: ClawAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -765,6 +784,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4436260290396320}
+  - component: {fileID: 65627775801711864}
   m_Layer: 2
   m_Name: Spine
   m_TagString: Untagged
@@ -2617,6 +2637,7 @@ Transform:
   - {fileID: 4032121423579726}
   - {fileID: 4674234911103164}
   - {fileID: 4830796081082728}
+  - {fileID: 4384179413074400}
   m_Father: {fileID: 4917571164659976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2689,6 +2710,19 @@ Transform:
   - {fileID: 4987624252291134}
   m_Father: {fileID: 4595333601221146}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4384179413074400
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285099667984782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.091, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4354731399133684}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4387901960435674
 Transform:
@@ -3641,6 +3675,110 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65421316334034846
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035427750098210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.24289525, z: 0.32122803}
+  m_Center: {x: -2.5255105e-29, y: 0.055781662, z: 0.024658203}
+--- !u!65 &65627775801711864
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415145557361130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0038891, z: 0.6368408}
+  m_Center: {x: 1.701528e-36, y: -0.17375326, z: -0.017669678}
+--- !u!82 &82721992886925938
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241803729034080}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 25
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95366825639915600
 Animator:
   serializedVersion: 3
@@ -3673,9 +3811,37 @@ MonoBehaviour:
   mySpawner: {fileID: 0}
   waypoint: {fileID: 0}
   fieldOfView: {fileID: 0}
+  zombieAnimator: {fileID: 95366825639915600}
   target: {fileID: 0}
   rotationTime: 3
   timeBetweenAttacks: 1
+  zombieAudioSource: {fileID: 82721992886925938}
+  zombieIdleClips:
+  - {fileID: 8300000, guid: 1fb0ffef842b745bda4a400b7e6914bb, type: 3}
+  - {fileID: 8300000, guid: a9bbec37959ad464d8eef0ed85262172, type: 3}
+  - {fileID: 8300000, guid: 38313662dee2340dea2d9d6d5362f42f, type: 3}
+  zombieAttackClips:
+  - {fileID: 8300000, guid: dd1338b991c73447a983adbc8effe3d5, type: 3}
+  - {fileID: 8300000, guid: 62fe1ae146558475b8a6c0deffb83970, type: 3}
+  - {fileID: 8300000, guid: 42d8fc3cbacf24ddfbeabbcc89fc2772, type: 3}
+  zombieImpactClips:
+  - {fileID: 8300000, guid: 5d09dd86efd604b0e9048fd674a6fa27, type: 3}
+  - {fileID: 8300000, guid: c920eba22a44b4f1b8d9aa13573104cb, type: 3}
+  zombieDieClip: {fileID: 8300000, guid: ce130644b119842688ff9c4d27a00507, type: 3}
+--- !u!114 &114360528260734212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241803729034080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c40306f1f84d324b9a51bf5e928a053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 150
+  zombie: {fileID: 0}
+  zombieCollider: {fileID: 136936706852237130}
 --- !u!114 &114612974525756208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3695,6 +3861,20 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+--- !u!114 &114747431916683208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241803729034080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07e2651e732f3f4ab7d5f4f75365963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieClaw: {fileID: 4384179413074400}
+  headDamage: 20
+  bodyDamage: 10
 --- !u!114 &114811786153539686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3707,7 +3887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSeeTarget: 0
-  filedOfView: 45
+  filedOfView: 55
   target: {fileID: 0}
   zombieEyePoint: {fileID: 4387901960435674}
   playerEyePoint: {fileID: 0}
